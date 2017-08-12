@@ -11,12 +11,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 export const firebaseConfig={
-    apiKey: "AIzaSyAZXc6x-GMDCpY2qCCCj2r52o1vNMTSZv4",
-    authDomain: "campguide-1219e.firebaseapp.com",
-    databaseURL: "https://campguide-1219e.firebaseio.com",
-    projectId: "campguide-1219e",
-    storageBucket: "campguide-1219e.appspot.com",
-    messagingSenderId: "289231772988"
+    apiKey: "AIzaSyAGXYy_DrCIVWgYnQHi7YwN2DxeK5BIDGQ",
+    authDomain: "campguide-489e7.firebaseapp.com",
+    databaseURL: "https://campguide-489e7.firebaseio.com",
+    projectId: "campguide-489e7",
+    storageBucket: "campguide-489e7.appspot.com",
+    messagingSenderId: "360796187188"
 }
 
 firebase.initializeApp(firebaseConfig);

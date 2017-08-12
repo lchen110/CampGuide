@@ -81,7 +81,7 @@
     <plugin name="cordova-plugin-console" spec="^1.0.5" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-googleplus" spec="^5.1.1">
-        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.289231772988-4rtvh91ivbqnpldba5trcgtm6ec40cql" />
+        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.360796187188-4l871ubba7uru9b863mbdaklv5p6h0ne" />
     </plugin>
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
