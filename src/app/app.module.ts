@@ -7,6 +7,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { AngularFireModule } from 'angularfire2';
 import  firebase from 'firebase';
 
+import {Facebook} from '@ionic-native/facebook';
+
 import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -44,7 +46,8 @@ firebase.initializeApp(firebaseConfig)
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GooglePlus
+    GooglePlus,
+    Facebook
   ]
 })
 export class AppModule {}

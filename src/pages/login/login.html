@@ -25,11 +25,11 @@
     		</ion-list>
 
     		<b center>OR</b> 
-    		<button ion-button color="primary" ion-left block>
+    		<button (click)="fbLogin()" ion-button color="primary" ion-left block>
     		<ion-icon name="logo-facebook"></ion-icon>
     		<div>Login with Facebook</div>
     		</button>
-    		<button (click)="login()" ion-button color="danger" ion-left block >
+    		<button (click)="googleLogin()" ion-button color="danger" ion-left block >
     		<ion-icon name="logo-google"></ion-icon>
     		<div>Login with Google</div>
     		</button>
