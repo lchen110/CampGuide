@@ -8,23 +8,26 @@ import { AngularFireModule } from 'angularfire2';
 import  firebase from 'firebase';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+// import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { MainPage } from '../pages/main/main';
 
 export const firebaseConfig={
-    apiKey: "AIzaSyAGXYy_DrCIVWgYnQHi7YwN2DxeK5BIDGQ",
-    authDomain: "campguide-489e7.firebaseapp.com",
-    databaseURL: "https://campguide-489e7.firebaseio.com",
-    projectId: "campguide-489e7",
-    storageBucket: "campguide-489e7.appspot.com",
-    messagingSenderId: "360796187188"
+    apiKey: "AIzaSyCmjBMYGnXdoLTRwbODebwf-jTINPEFi0E",
+    authDomain: "campguide-16488.firebaseapp.com",
+    databaseURL: "https://campguide-16488.firebaseio.com",
+    projectId: "campguide-16488",
+    storageBucket: "campguide-16488.appspot.com",
+    messagingSenderId: "998487466544"
 }
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    LoginPage,
+    MainPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ firebase.initializeApp(firebaseConfig);
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LoginPage,
+    MainPage
   ],
   providers: [
     StatusBar,
