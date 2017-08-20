@@ -1,38 +1,62 @@
 <ion-content class="background">
 	<h1>CampGuide</h1>
 	<ion-card>
-    	<ion-card-header>
-      		Login
-    	</ion-card-header>
+		<ion-card-header>
+			Login
+		</ion-card-header>
+		
+		<ion-card-content>
+			<form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+				
+				<ion-list no-lines>
+					<ion-item>
+						<ion-label stacked>Username</ion-label>
+						<ion-input formControlName="email" type="email"
+						placeholder="Your email address"
+						[class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+					</ion-item>
+					<ion-item class="error-message" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty">
+						<p>Please enter a valid email.</p>
+					</ion-item>
+					
+					<ion-item>
+						<ion-label stacked>Password</ion-label>
+						<ion-input formControlName="password" type="password"
+						placeholder="Your password"
+						[class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+					</ion-item>
+					<ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
+						<p>Your password needs more than 6 characters.</p>
+					</ion-item>
+					<!-- <ion-item>
+						<p>Forget Password<a href="">Get here</a></p>
+					</ion-item> -->
+					
+					<!-- <button (click)="login()" ion-button color="danger" block outline>Login</button> -->
+					<button ion-button block outline color="danger" type="submit" [disabled]="!loginForm.valid">
+						Login
+					</button>
+					<!-- <button (click)="register()" ion-button color="danger" block outline>Register</button> -->
+				</ion-list>
+			</form>
+			
+			<button (click)="goToSignup()" ion-button color="danger" block outline>
+				Create a new account
+			</button>
 
-    	<ion-card-content>
-    		<ion-list no-lines>
-    		  <ion-item>
-    		  	<ion-label floating>Username</ion-label>
-    		  	<ion-input type="text"></ion-input>
-    		  </ion-item>
-
-    		  <ion-item>
-    		  	<ion-label floating>Password</ion-label>
-    		  	<ion-input type="Password"></ion-input>
-    		  </ion-item>
-
-    		  <ion-item>
-    		  	<p>Forget Password<a href="">Get here</a></p>
-    		  </ion-item>
- 
-    		  <button ion-button color="danger" block outline>Login</button>
-    		</ion-list>
-
-    		<b center>OR</b> 
-    		<button (click)="fbLogin()" ion-button color="primary" ion-left block>
-    		<ion-icon name="logo-facebook"></ion-icon>
-    		<div>Login with Facebook</div>
-    		</button>
-    		<button (click)="googleLogin()" ion-button color="danger" ion-left block >
-    		<ion-icon name="logo-google"></ion-icon>
-    		<div>Login with Google</div>
-    		</button>
-  		</ion-card-content>
-  </ion-card>
+			<button (click)="goToResetPassword()" ion-button block outline>
+				I forgot my password
+			</button>
+			
+			<b center>OR</b> 
+			<button (click)="fbLogin()" ion-button color="primary" ion-left block>
+				<ion-icon name="logo-facebook"></ion-icon>
+				<div>Login with Facebook</div>
+			</button>
+			<button (click)="googleLogin()" ion-button color="danger" ion-left block >
+				<ion-icon name="logo-google"></ion-icon>
+				<div>Login with Google</div>
+			</button>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

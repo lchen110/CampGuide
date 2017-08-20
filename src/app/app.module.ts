@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth' ;
+
 import  firebase from 'firebase';
 
 import {Facebook} from '@ionic-native/facebook';
@@ -13,6 +15,8 @@ import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { MainPage } from '../pages/main/main';
+import { RegisterPage } from '../pages/register/register';
+import { AuthProvider } from '../providers/auth/auth';
 
 export const firebaseConfig={
     apiKey: "AIzaSyCmjBMYGnXdoLTRwbODebwf-jTINPEFi0E",
@@ -29,25 +33,29 @@ firebase.initializeApp(firebaseConfig)
   declarations: [
     MyApp,
     LoginPage,
-    MainPage
+    MainPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    MainPage
+    MainPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GooglePlus,
-    Facebook
+    Facebook,
+    AuthProvider
   ]
 })
 export class AppModule {}
